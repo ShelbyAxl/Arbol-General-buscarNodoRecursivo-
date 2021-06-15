@@ -62,7 +62,7 @@ public class ArbolGeneral {
         return null;
     }
     
-    private NodoGeneral buscarNodoRecursivo(String path, int cont){
+    private NodoGeneral buscarNodoRecursivo(String path, int cont){ //CUANDO SE MANDE A LLAMAR ESTA FUNCION ES NECESARIO PONER 0 EN EL PARAMETRO DE CONT
         if(cont == path.split("/").length-1)return raiz;
         if(cont == 0)path = path.substring(1);
         if(path.split("/")[0].charAt(0) == raiz.dato){
