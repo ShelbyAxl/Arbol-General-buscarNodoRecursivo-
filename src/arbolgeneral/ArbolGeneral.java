@@ -54,7 +54,7 @@ public class ArbolGeneral {
             
             NodoGeneral padre = raiz;
             for(int i=1; i < vector.length; i++){
-                padre = padre.obtenerHijo(vector[i].charAt(i));
+                padre = padre.obtenerHijo(vector[i].charAt(0));
                 if(padre == null)return null;
             }
             return padre;
@@ -68,7 +68,7 @@ public class ArbolGeneral {
         if(path.split("/")[0].charAt(0) == raiz.dato){
             if(path.split("/").length == 1)return raiz;
         }
-        if(raiz.obtenerHijo(path.split("/")[cont].charAt(cont)) != null)return buscarNodoRecursivo(path, cont+1);
+        if(raiz.obtenerHijo(path.split("/")[cont].charAt(0)) != null)return buscarNodoRecursivo(path, cont+1);
         return null;
     }
 
